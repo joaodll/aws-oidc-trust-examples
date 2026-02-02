@@ -35,7 +35,7 @@ GitHub Actions:
 5. AWS returns **temporary credentials** for a specific IAM role.
 6. The job uses those credentials to access AWS.
 
-## Related GitHub and documentation
+## Related GitHub and AWS documentations
 
 - [OpenId Connect](https://docs.github.com/en/actions/concepts/security/openid-connect)
 - [OIDC in Cloud Providers](https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-cloud-providers)
