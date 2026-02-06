@@ -47,7 +47,7 @@ TFC_AWS_APPLY_ROLE_ARN = ARN of role to use during apply (if different)
 TFC_AWS_WORKLOAD_IDENTITY_AUDIENCE = custom audience if you changed it from default aws.workload.identity
 ```
 
-## Files
+## Structure
 
 - `main.tf`  - Creates the OIDC provider, IAM role and IAM Policies
 - `data.tf`  - Defines the IAM trust policy conditions
