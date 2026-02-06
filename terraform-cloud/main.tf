@@ -10,7 +10,7 @@ resource "aws_iam_openid_connect_provider" "tfc_oidc" {
   ]
 
   thumbprint_list = [
-    "{TERRAFORM_THUMBPRINT}"
+    "VWtu7jf8hlodvyPKgmGCqAfbRD4dmdQq8p2gIqjO"
   ]
 }
 
@@ -18,7 +18,7 @@ resource "aws_iam_role" "terraform_cloud_role" {
   name               = "${local.name}-oidc-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 
-  max_session_duration = 1800 ## 30min
+  max_session_duration = 3600 ## Must to be in the range (3600 - 43200)
 
   depends_on = [aws_iam_openid_connect_provider.tfc_oidc]
 }
