@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "assume_role" {
 
     condition {
       test     = "StringLike"
-      variable = "token.actions.githubusercontent.com:sub"
+      variable = "${local.github-user-content}:sub"
       values = [
         "repo:OWNER/REPO:ref:refs/heads/main",
         "repo:OWNER/REPO:ref:refs/heads/release/*"
@@ -19,14 +19,8 @@ data "aws_iam_policy_document" "assume_role" {
 
     condition {
       test     = "StringEquals"
-      variable = "token.actions.githubusercontent.com:aud"
-      values   = ["sts.amazonaws.com"]
-    }
-
-    condition {
-      test     = "StringEquals"
-      variable = "token.actions.githubusercontent.com:aud"
-      values   = ["sts.amazonaws.com"]
+      variable = "${local.github-user-content}:aud"
+      values   = [local.client_id_list]
     }
   }
 }

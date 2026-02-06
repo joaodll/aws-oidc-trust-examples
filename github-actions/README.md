@@ -35,6 +35,14 @@ GitHub Actions:
 5. AWS returns **temporary credentials** for a specific IAM role.
 6. The job uses those credentials to access AWS.
 
+## Structure
+
+- `main.tf`  - Creates the OIDC provider, IAM role and IAM Policies
+- `data.tf`  - Defines the IAM trust policy conditions
+- `example/` - Directory that contains usage example
+- `provider.tf` - Provider configuration
+- `versions.tf` - Provider versions configuration
+- 
 ## Related GitHub and AWS documentations
 
 - [OpenId Connect](https://docs.github.com/en/actions/concepts/security/openid-connect)
