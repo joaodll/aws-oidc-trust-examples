@@ -10,7 +10,7 @@ resource "aws_iam_openid_connect_provider" "tfc_oidc" {
   ]
 
   thumbprint_list = [
-    "VWtu7jf8hlodvyPKgmGCqAfbRD4dmdQq8p2gIqjO"
+    "SOME_VALID_THUMBPRINT"
   ]
 }
 
